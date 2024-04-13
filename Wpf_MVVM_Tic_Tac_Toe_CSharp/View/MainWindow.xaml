@@ -5,40 +5,25 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Wpf_MVVM_Tic_Tac_Toe_CSharp.View"
         mc:Ignorable="d"
-                Title="Однопользовательский режим" Height="450" Width="700">
+        Title="Tic-tac-toe" Height="400" Width="300">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="80*"/>
-            <RowDefinition Height="75*"/>
-            <RowDefinition Height="5*"/>
-            <RowDefinition Height="75*"/>
-            <RowDefinition Height="5*"/>
-            <RowDefinition Height="75*"/>
-            <RowDefinition Height="80*"/>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="72*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="72*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="72*"/>
+            <RowDefinition Height="100*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="80*"/>
-            <ColumnDefinition Width="75*"/>
-            <ColumnDefinition Width="5*"/>
-            <ColumnDefinition Width="75*"/>
-            <ColumnDefinition Width="5*"/>
-            <ColumnDefinition Width="75*"/>
-            <ColumnDefinition Width="30*"/>
-            <ColumnDefinition Width="200*"/>
+            <ColumnDefinition Width="150*"/>
             <ColumnDefinition Width="80*"/>
         </Grid.ColumnDefinitions>
-        <Button x:Name="b1" Grid.Column="1" Grid.Row="1" Click="Buttonclick" Content=" " />
-        <Button x:Name="b2" Grid.Column="3" Grid.Row="1" Click="Buttonclick" Content=" "/>
-        <Button x:Name="b3" Content=" " Grid.Column="5" Grid.Row="1" Click="Buttonclick"/>
-        <Button x:Name="b4" Content=" " Grid.Column="1" Grid.Row="3" Click="Buttonclick"/>
-        <Button x:Name="b5" Content=" " Grid.Column="3" Grid.Row="3" Click="Buttonclick"/>
-        <Button x:Name="b6" Content=" " Grid.Column="5" Grid.Row="3" Click="Buttonclick"/>
-        <Button x:Name="b7" Content=" " Grid.Column="1" Grid.Row="5" Click="Buttonclick" />
-        <Button x:Name="b8" Content=" " Grid.Column="3" Grid.Row="5" Click="Buttonclick"/>
-        <Button x:Name="b9" Content=" " Grid.Column="5" Grid.Row="5" Click="Buttonclick"/>
-        <Button x:Name="Start" Content="Начать" Grid.Column="7" Grid.Row="5" Click="Start_Click" />
-        <RadioButton x:Name="r1" Content="Крестики" Grid.Column="7" Grid.Row="1"  VerticalAlignment="Center" HorizontalAlignment="Center" GroupName="vibor" IsChecked="False" Checked="r_Checked"/>
-        <RadioButton x:Name="r2" Content="Нолики" Grid.Column="7" Grid.Row="3"  VerticalAlignment="Center" HorizontalAlignment="Center" GroupName="vibor" Checked="r_Checked"/>
-        <TextBlock  TextWrapping="Wrap" Text="За кого будешь играть" Grid.ColumnSpan="10" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <Button Content="Одиночное" Grid.Column="1" Grid.Row="1" Command="{Binding Odin}"/>
+        <Button Content="Мультиплеер" Grid.Column="1" Grid.Row="3" Command="{Binding Mnogo}"/>
+        <Button Content="Выход" Grid.Column="1" Grid.Row="5" Command="{Binding Nul}"/>
+        <TextBlock Grid.Column="1" TextWrapping="Wrap" Text="Добро пожаловать в игру Tic-tac-toe" VerticalAlignment="Center" HorizontalAlignment="Center" Width="120"/>
     </Grid>
 </Window>
